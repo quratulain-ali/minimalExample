@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ClassDiagram:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ClassDiagram="www.classdiagram.com" name="GameLogic">
+  <contents xsi:type="ClassDiagram:Class" name="student walking">
+    <operations name="walk to the computer" returnType="String">
+      <parameters name="a" type="String"/>
+    </operations>
+  </contents>
+</ClassDiagram:Package>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SequenceDiagram:SequenceDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SequenceDiagram="www.sequenceDiagram.com" title="Master Thesis Definition">
+  <lifelines name="Player:Student" ownerObject="Student">
+    <elements xsi:type="SequenceDiagram:Message" ID="4" action="walk to the computer" isSendMsg="true" sourceLifeline="//@lifelines.0">
+      <op returnType="String">
+        <param argName="a" argType="String"/>
+      </op>
+    </elements>
+  </lifelines>
+</SequenceDiagram:SequenceDiagram>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SequenceDiagram" nsURI="www.sequenceDiagram.com" nsPrefix="SequenceDiagram">
+  <eClassifiers xsi:type="ecore:EClass" name="SequenceDiagram">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifelines" lowerBound="1"
+        upperBound="-1" eType="#//Lifeline" containment="true" eOpposite="#//Lifeline/ownerDiagram"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lifeline">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerDiagram" lowerBound="1"
+        eType="#//SequenceDiagram" eOpposite="#//SequenceDiagram/lifelines"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//lifelineElement" containment="true" eOpposite="#//lifelineElement/ownerLifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partOf" upperBound="-1"
+        eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ownerObject" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="lifelineElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" lowerBound="1"
+        upperBound="-1" eType="#//lifelineElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" upperBound="-1"
+        eType="#//lifelineElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerLifeline" lowerBound="1"
+        eType="#//Lifeline" eOpposite="#//Lifeline/elements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedOperand" upperBound="-1"
+        eType="#//Operand"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//lifelineElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSendMsg" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReceiveMsg" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLifeline" lowerBound="1"
+        eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetLifeline" lowerBound="1"
+        eType="#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="op" eType="#//Operation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CombinedFragment" eSuperTypes="#//lifelineElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//FragmentType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operands" upperBound="-1"
+        eType="#//Operand" containment="true" eOpposite="#//Operand/ownerFragment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="guard" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerFragment" lowerBound="1"
+        eType="#//CombinedFragment" eOpposite="#//CombinedFragment/operands"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FragmentType">
+    <eLiterals name="alt"/>
+    <eLiterals name="loop" value="1"/>
+    <eLiterals name="opt" value="3"/>
+    <eLiterals name="par" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="param" upperBound="-1"
+        eType="#//Param" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Param">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eSubpackages name="PrimitiveTypes" nsURI="www.PrimitiveTypes.com" nsPrefix="PrimitiveTypes">
+    <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.Object"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="boolean"/>
+  </eSubpackages>
+</ecore:EPackage>
