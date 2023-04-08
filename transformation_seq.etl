@@ -1,0 +1,32 @@
+rule SequenceDiagram
+	transform s : Old!SequenceDiagram
+	to t : New!SequenceDiagram {
+
+	t.name = s.title;
+	t.lifelines = s.lifelines.equivalent();
+}
+
+rule Lifeline
+	transform s : Old!Lifeline
+	to t : New!Lifeline {
+
+	t.name = s.name;
+	t.type = s.ownerObject;
+}
+
+rule Parameter2Parameter
+	transform s : Old!Param
+	to t : New!Parameter {
+	t.name = s.argName;
+	t.type = s.argType;
+}
+
+rule Message
+	transform s : Old!Message
+	to t : New!Message {
+	t.`operation` = s.action;
+	t.from = s.sourceLifeline.equivalent();
+	t.`to`= s.targetLifeline.equivalent();
+	if(s.op != null)
+	t.parameters = s.op.param.equivalent();
+}

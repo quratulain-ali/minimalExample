@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cd="cd">
+  <cd:Class name="level 1_Master Thesis Definition">
+    <operations name="initializeLevel" type="/84"/>
+    <operations name="LoadLevel" type="/86">
+      <parameters name="LevelName" type="/85"/>
+    </operations>
+    <operations name="RestartLevel" type="/87"/>
+  </cd:Class>
+  <cd:Class name="StudentLog"/>
+  <cd:Class name="Student State"/>
+  <cd:Class name="Start Level" superTypes="/2">
+    <operations name="changeState" type="/89">
+      <parameters name="condition" type="/88"/>
+    </operations>
+    <operations name="show level startup screen " type="/90"/>
+    <operations name="set level start time in player log" type="/91"/>
+  </cd:Class>
+  <cd:Class name="student walking" superTypes="/2">
+    <operations name="changeState" type="/93">
+      <parameters name="condition" type="/92"/>
+    </operations>
+    <operations name="walk to the computer" type="/94"/>
+    <operations name="call Task1 of BP component" type="/95"/>
+  </cd:Class>
+  <cd:Class name="form preparation" superTypes="/2">
+    <operations name="changeState" type="/97">
+      <parameters name="condition" type="/96"/>
+    </operations>
+    <operations name="stand behind the computer" type="/98"/>
+    <operations name="run URL challenge " type="/99"/>
+  </cd:Class>
+  <cd:Class name="URL challenge finished" superTypes="/2">
+    <operations name="changeState" type="/101">
+      <parameters name="condition" type="/100"/>
+    </operations>
+    <operations name="choose download option" type="/102"/>
+    <operations name="choose print option" type="/103"/>
+  </cd:Class>
+  <cd:Class name="form is printed" superTypes="/2">
+    <operations name="changeState" type="/105">
+      <parameters name="condition" type="/104"/>
+    </operations>
+    <operations name="take the paper from printer" type="/106"/>
+  </cd:Class>
+  <cd:Class name="Form sections query" superTypes="/2">
+    <operations name="changeState" type="/108">
+      <parameters name="condition" type="/107"/>
+    </operations>
+    <operations name="show form sections query screen" type="/109"/>
+    <operations name="fill each section and save" type="/110"/>
+  </cd:Class>
+  <cd:Class name="meeting supervisor" superTypes="/2">
+    <operations name="changeState" type="/112">
+      <parameters name="condition" type="/111"/>
+    </operations>
+    <operations name="walk to the supervisor room" type="/113"/>
+    <operations name="enter to the room" type="/114"/>
+    <operations name="stand in front of supervisor character" type="/115"/>
+    <operations name="call Task2 of BP component" type="/116"/>
+  </cd:Class>
+  <cd:Class name="form delivery" superTypes="/2">
+    <operations name="changeState" type="/118">
+      <parameters name="condition" type="/117"/>
+    </operations>
+    <operations name="give the form to the supervisor character" type="/119"/>
+  </cd:Class>
+  <cd:Class name="change definition form" superTypes="/2">
+    <operations name="changeState" type="/121">
+      <parameters name="condition" type="/120"/>
+    </operations>
+    <operations name="student look at the paper" type="/122"/>
+    <operations name="leave supervisor room" type="/123"/>
+  </cd:Class>
+  <cd:Class name="Form wrong sections query" superTypes="/2">
+    <operations name="changeState" type="/125">
+      <parameters name="condition" type="/124"/>
+    </operations>
+    <operations name="show highlighted form screen" type="/126"/>
+    <operations name="player edits each wrong sections" type="/127"/>
+  </cd:Class>
+  <cd:Class name="URL challenge State"/>
+  <cd:Class name="URL query" superTypes="/13">
+    <operations name="changeState" type="/129">
+      <parameters name="condition" type="/128"/>
+    </operations>
+    <operations name="show URL Query screen" type="/130"/>
+    <operations name="select a URL from list" type="/131"/>
+  </cd:Class>
+  <cd:Class name="check URL challenge response" superTypes="/13">
+    <operations name="changeState" type="/133">
+      <parameters name="condition" type="/132"/>
+    </operations>
+    <operations name="ask task1 of BP component for correct answer" type="/134"/>
+    <operations name="validate user answer due to correct answer" type="/135"/>
+    <operations name="runScoringRule" type="/136"/>
+  </cd:Class>
+  <cd:Class name="show URL challenge result" superTypes="/13">
+    <operations name="changeState" type="/138">
+      <parameters name="condition" type="/137"/>
+    </operations>
+    <operations name="show URL challenge result screen " type="/139"/>
+  </cd:Class>
+  <cd:Class name="Thesis definition accuracy State"/>
+  <cd:Class name="challenge response checking" superTypes="/17">
+    <operations name="runScoringRule" type="/140"/>
+  </cd:Class>
+  <cd:Class name="Supervisor State"/>
+  <cd:Class name="form taking" superTypes="/19">
+    <operations name="changeState" type="/142">
+      <parameters name="condition" type="/141"/>
+    </operations>
+    <operations name="supervisor taking the paper" type="/143"/>
+    <operations name="call Task3 of BP component" type="/144"/>
+  </cd:Class>
+  <cd:Class name="form completeness checking" superTypes="/19">
+    <operations name="changeState" type="/146">
+      <parameters name="condition" type="/145"/>
+    </operations>
+    <operations name="look at the paper" type="/147"/>
+  </cd:Class>
+  <cd:Class name="form correctness checking" superTypes="/19">
+    <operations name="changeState" type="/149">
+      <parameters name="condition" type="/148"/>
+    </operations>
+    <operations name="call Gateway1 of BP component" type="/150"/>
+    <operations name="save result in player log" type="/151"/>
+    <operations name="run Thesis definition accuracy challenge" type="/152"/>
+  </cd:Class>
+  <cd:Class name="form rejection" superTypes="/19">
+    <operations name="changeState" type="/154">
+      <parameters name="condition" type="/153"/>
+    </operations>
+    <operations name="color the form to red" type="/155"/>
+    <operations name="highlights wrong fields of the saved form" type="/156"/>
+    <operations name="return form paper to the student" type="/157"/>
+    <operations name="call Task4 of BP component" type="/158"/>
+  </cd:Class>
+  <cd:Class name="form acceptance" superTypes="/19">
+    <operations name="changeState" type="/160">
+      <parameters name="condition" type="/159"/>
+    </operations>
+    <operations name="color the form to green" type="/161"/>
+    <operations name="call Task5 of BP component" type="/162"/>
+  </cd:Class>
+  <cd:Class name="form confirmation and signing" superTypes="/19">
+    <operations name="changeState" type="/164">
+      <parameters name="condition" type="/163"/>
+    </operations>
+    <operations name="Supervisor write something on the form" type="/165"/>
+    <operations name="put the form on the table" type="/166"/>
+    <operations name="call End Event of BP component" type="/167"/>
+  </cd:Class>
+  <cd:Class name="Final State" superTypes="/19">
+    <operations name="save level finishing time in player log" type="/168"/>
+    <operations name="show end of level screen" type="/169"/>
+    <operations name="update game result for player" type="/170"/>
+    <operations name="show level result screen" type="/171"/>
+  </cd:Class>
+  <cd:Class name="door_s State"/>
+  <cd:Class name="open_s" superTypes="/27">
+    <operations name="changeState" type="/173">
+      <parameters name="condition" type="/172"/>
+    </operations>
+    <operations name="open the door_s" type="/175">
+      <parameters name="constraint" type="/174"/>
+    </operations>
+  </cd:Class>
+  <cd:Class name="close_s" superTypes="/27">
+    <operations name="changeState" type="/177">
+      <parameters name="condition" type="/176"/>
+    </operations>
+    <operations name="close the door_s" type="/179">
+      <parameters name="constraint" type="/178"/>
+    </operations>
+  </cd:Class>
+  <cd:Class name="door State"/>
+  <cd:Class name="open" superTypes="/30">
+    <operations name="changeState" type="/181">
+      <parameters name="condition" type="/180"/>
+    </operations>
+    <operations name="open the door" type="/184">
+      <parameters name="Animation" type="/182"/>
+      <parameters name="constraint" type="/183"/>
+    </operations>
+  </cd:Class>
+  <cd:Class name="close" superTypes="/30">
+    <operations name="changeState" type="/186">
+      <parameters name="condition" type="/185"/>
+    </operations>
+    <operations name="close the door" type="/189">
+      <parameters name="Animation" type="/187"/>
+      <parameters name="constraint" type="/188"/>
+    </operations>
+  </cd:Class>
+  <cd:Class name="printer State"/>
+  <cd:Class name="printer is on" superTypes="/33">
+    <operations name="changeState" type="/191">
+      <parameters name="condition" type="/190"/>
+    </operations>
+    <operations name="play printer voice and show paper" type="/193">
+      <parameters name="constraint" type="/192"/>
+    </operations>
+  </cd:Class>
+  <cd:Class name="printer is off" superTypes="/33">
+    <operations name="stop printer voice" type="/194"/>
+  </cd:Class>
+  <cd:Class name="form Paper State"/>
+  <cd:Class name="form creation" superTypes="/36">
+    <operations name="changeState" type="/196">
+      <parameters name="condition" type="/195"/>
+    </operations>
+    <operations name="save the form in player log" type="/198">
+      <parameters name="constraint" type="/197"/>
+    </operations>
+    <operations name="Player write something on the form" type="/199"/>
+  </cd:Class>
+  <cd:Class name="form updating" superTypes="/36">
+    <operations name="changeState" type="/201">
+      <parameters name="condition" type="/200"/>
+    </operations>
+    <operations name="save updated form in player log" type="/203">
+      <parameters name="constraint" type="/202"/>
+    </operations>
+    <operations name="Player edit something on the form" type="/204"/>
+    <operations name="recall Task2 of BP component" type="/205"/>
+  </cd:Class>
+  <cd:Class name="URL challenge">
+    <operations name="startChallenge" type="/206"/>
+    <operations name="forceStopChallenge" type="/207"/>
+    <operations name="validStopChallenge" type="/208"/>
+  </cd:Class>
+  <cd:Class name="Thesis definition accuracy">
+    <operations name="startChallenge" type="/209"/>
+    <operations name="forceStopChallenge" type="/210"/>
+    <operations name="validStopChallenge" type="/211"/>
+  </cd:Class>
+  <cd:Class name="URL challenge reward">
+    <operations name="calculateScore" type="/212"/>
+  </cd:Class>
+  <cd:Class name="Thesis definition accuracy challenge reward">
+    <operations name="calculateScore" type="/213"/>
+  </cd:Class>
+  <cd:Class name="Scene_Master Thesis Definition"/>
+  <cd:Class name="Student"/>
+  <cd:Class name="Supervisor"/>
+  <cd:Class name="University"/>
+  <cd:Class name="Supervisor Room"/>
+  <cd:Class name="wall_s"/>
+  <cd:Class name="door_s"/>
+  <cd:Class name="table_s"/>
+  <cd:Class name="computer_s"/>
+  <cd:Class name="Student Room"/>
+  <cd:Class name="wall"/>
+  <cd:Class name="door"/>
+  <cd:Class name="table"/>
+  <cd:Class name="computer"/>
+  <cd:Class name="printer"/>
+  <cd:Class name="form Paper"/>
+  <cd:Class name="Screen">
+    <operations name="show" type="/214"/>
+    <operations name="hide" type="/215"/>
+  </cd:Class>
+  <cd:Class name="level startup" superTypes="/59"/>
+  <cd:Class name="form sections query" superTypes="/59"/>
+  <cd:Class name="URL query" superTypes="/59"/>
+  <cd:Class name="URL challenge result" superTypes="/59"/>
+  <cd:Class name="highlighted form" superTypes="/59"/>
+  <cd:Class name="End of level" superTypes="/59"/>
+  <cd:Class name="level result" superTypes="/59"/>
+  <cd:Class name="Transform"/>
+  <cd:Class name="CharacterController"/>
+  <cd:Class name="Trigger"/>
+  <cd:Class name="Collider"/>
+  <cd:Class name="RigidBody"/>
+  <cd:Class name="Art"/>
+  <cd:Class name="Animation" superTypes="/72"/>
+  <cd:Class name="Audio" superTypes="/72"/>
+  <cd:Class name="Material" superTypes="/72"/>
+  <cd:Class name="Point"/>
+  <cd:Class name="Badge"/>
+  <cd:Class name="Game_DB_worker">
+    <operations name="getInstance" type="/216"/>
+    <operations name="create" type="/217"/>
+    <operations name="read" type="/218"/>
+    <operations name="update" type="/219"/>
+    <operations name="delete" type="/220"/>
+  </cd:Class>
+  <cd:Class name="BP_DB_worker">
+    <operations name="getInstance" type="/221"/>
+    <operations name="create" type="/222"/>
+    <operations name="read" type="/223"/>
+    <operations name="update" type="/224"/>
+    <operations name="delete" type="/225"/>
+  </cd:Class>
+  <cd:Class name="Student_lane">
+    <operations name="preparing department thesis definition form" type="/226"/>
+    <operations name="deliver the form to the supervisor" type="/227"/>
+    <operations name="change definition form" type="/228"/>
+    <operations name="startEvent" type="/229"/>
+  </cd:Class>
+  <cd:Class name="Supervisor_lane">
+    <operations name="form completeness checking" type="/230"/>
+    <operations name="form confirmation and signing" type="/231"/>
+    <operations name="endEvent" type="/232"/>
+    <operations name="is the form complete?" type="/233"/>
+  </cd:Class>
+  <cd:Class name="University"/>
+  <cd:Class name="department thesis definition form">
+    <operations name="create" type="/234"/>
+    <operations name="read" type="/235"/>
+    <operations name="update" type="/236"/>
+    <operations name="delete" type="/237"/>
+  </cd:Class>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType name="/2/@contents.0"/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType name="/2/@contents.1"/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+  <cd:DataType/>
+</xmi:XMI>

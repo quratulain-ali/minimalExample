@@ -1,0 +1,38 @@
+rule Class2Class
+	transform s : Old!Class
+	to t : New!Class {
+
+	t.name = s.name;
+	t.operations = s.operations.equivalent();
+	t.superTypes = s.superClass.equivalent();
+}
+
+rule Operation2Operation
+	transform s : Old!Operation
+	to t : New!Operation {
+
+	t.name = s.name;
+	t.parameters = s.parameters.equivalent();
+	var typ : New!DataType = new New!DataType;
+	typ.name = s.returnType;
+	t.type = typ;
+}
+
+rule Parameter2Parameter
+	transform s : Old!Parameter
+	to t : New!Parameter {
+	var typ : New!DataType = new New!DataType;
+	typ.name = s.type;
+	t.name = s.name;
+	t.type = typ;
+}
+
+rule Type2Type
+	transform s : Old!DataType
+	to t : New!Parameter {
+
+	t.name = s.name;
+	var typ : New!DataType;
+	typ.name  = s.type;
+	t.type = typ;
+}

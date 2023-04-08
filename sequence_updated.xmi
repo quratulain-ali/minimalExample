@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="SequenceDiagram">
+  <SequenceDiagram name="Master Thesis Definition">
+    <lifelines name="Player:Student" type="Student"/>
+    <lifelines name="Start_Level" type="Student"/>
+    <lifelines name="student_walking" type="Student"/>
+    <lifelines name="form_preparation" type="Student"/>
+    <lifelines name="printer_is_on" type="printer"/>
+    <lifelines name="form_is_printed" type="Student"/>
+    <lifelines name="Form_sections_query" type="Student"/>
+    <lifelines name="meeting_supervisor" type="Student"/>
+    <lifelines name="form_rejection" type="Supervisor"/>
+    <lifelines name="change_definition_form" type="Student"/>
+    <lifelines name="Form_wrong_sections_query" type="Student"/>
+    <lifelines name="URL_query" type="Student"/>
+    <lifelines name="show_URL_challenge_result" type="Student"/>
+    <lifelines name="form_delivery" type="Student"/>
+    <lifelines name="form_taking" type="Supervisor"/>
+    <lifelines name="form_completeness_checking" type="Supervisor"/>
+    <lifelines name="form_correctness_checking" type="Supervisor"/>
+    <lifelines name="form_acceptance" type="Supervisor"/>
+    <lifelines name="form_confirmation_and_signing" type="Supervisor"/>
+    <lifelines name="Final_State" type="Supervisor"/>
+    <lifelines name="open_s" type="door_s"/>
+    <lifelines name="close_s" type="door_s"/>
+    <lifelines name="open" type="door"/>
+    <lifelines name="close" type="door"/>
+    <lifelines name="URL_challenge_finished" type="Student"/>
+    <lifelines name="printer_is_off" type="printer"/>
+    <lifelines name="form_creation" type="form Paper"/>
+    <lifelines name="level_startup" type="level startup"/>
+    <lifelines name="StudentLog" type="StudentLog"/>
+    <lifelines name="Student:Lane" type="Student_lane"/>
+    <lifelines name="department_thesis_definition_form:Resource" type="department thesis definition form"/>
+    <lifelines name="URL_challenge" type="Student"/>
+    <lifelines name="form_sections_query" type="form sections query"/>
+    <lifelines name="highlighted_form" type="highlighted form"/>
+    <lifelines name="URL_query" type="URL query"/>
+    <lifelines name="check_URL_challenge_response" type="Student"/>
+    <lifelines name="URL_challenge_result" type="URL challenge result"/>
+    <lifelines name="Supervisor:Lane" type="Supervisor_lane"/>
+    <lifelines name="Thesis_definition_accuracy" type="Student"/>
+    <lifelines name="End_of_level" type="End of level"/>
+    <lifelines name="level_result" type="level result"/>
+    <lifelines name="form_updating" type="form Paper"/>
+    <lifelines name="URL_challenge_reward" type="URL challenge reward"/>
+    <lifelines name="5_point" type="point"/>
+    <lifelines name="3_point" type="point"/>
+    <lifelines name="challenge_response_checking" type="Student"/>
+    <lifelines name="Thesis_definition_accuracy_challenge_reward" type="Thesis definition accuracy challenge reward"/>
+    <lifelines name="Thesis_definition_expertise" type="badge"/>
+    <lifelines name="1_point" type="point"/>
+  </SequenceDiagram>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.2" operation="walk to the computer"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.3" operation="stand behind the computer"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.24" operation="choose download option"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.24" operation="choose print option"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="walk to the supervisor room"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="enter to the room"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="stand in front of supervisor character"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.13" operation="give the form to the supervisor character"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="show level startup screen "/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="show level startup screen "/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.27" operation="show"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="set level start time in player log"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="set level start time in player log"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.1" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.2" operation="create()"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.2" operation="walk to the computer"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.2" operation="call Task1 of BP component"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.2" operation="call Task1 of BP component"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.29" operation="preparing department thesis definition form"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.2" operation="return (correctOutputs)"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.2" operation="create()"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.2" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.2" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.3" operation="create()"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.3" operation="stand behind the computer"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.3" operation="run URL challenge "/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.3" operation="run URL challenge "/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.31" operation="startChallenge"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.11" operation="show URL Query screen"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.3" operation="create()"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.3" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.3" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.11" operation="create()"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.5" operation="take the paper from printer"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.4" operation="play printer voice and show paper(constraint)"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.4" operation="create()"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.4" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.4" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.25" operation="create()"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.5" operation="take the paper from printer"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.6" operation="show form sections query screen"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.5" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.5" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.6" operation="create()"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.6" operation="show form sections query screen"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.32" operation="show"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.6" operation="fill each section and save"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.6" operation="fill each section and save"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.26" operation="save the form in player log(constraint)"/>
+  <Message from="/0/@lifelines.5" to="/0/@lifelines.6" operation="create()"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.6" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.6" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.26" operation="create()"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="walk to the supervisor room"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="enter to the room"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.7" operation="stand in front of supervisor character"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.7" operation="call Task2 of BP component"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.7" operation="call Task2 of BP component"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.29" operation="deliver the form to the supervisor"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.7" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.7" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.7" operation="create()"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.9" operation="student look at the paper"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.8" operation="color the form to red"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="highlights wrong fields of the saved form"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="highlights wrong fields of the saved form"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="return form paper to the student"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="return form paper to the student"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="call Task4 of BP component"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="call Task4 of BP component"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.29" operation="change definition form"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.8" operation="create()"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.8" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.9" operation="student look at the paper"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.9" operation="leave supervisor room"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.9" operation="leave supervisor room"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.10" operation="show highlighted form screen"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.9" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.9" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.10" operation="create()"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.10" operation="show highlighted form screen"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.33" operation="show"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.10" operation="player edits each wrong sections"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.10" operation="player edits each wrong sections"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.41" operation="save updated form in player log(constraint)"/>
+  <Message from="/0/@lifelines.9" to="/0/@lifelines.10" operation="create()"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.10" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.10" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.41" operation="create()"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.11" operation="show URL Query screen"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.34" operation="show"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.11" operation="select a URL from list"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.11" operation="select a URL from list"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.35" operation="ask task1 of BP component for correct answer"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.11" operation="create()"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.11" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.11" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.35" operation="create()"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.12" operation="show URL challenge result screen "/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.12" operation="show URL challenge result screen "/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.36" operation="show"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.12" operation="create()"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.12" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.12" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.24" operation="create()"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.13" operation="give the form to the supervisor character"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.14" operation="supervisor taking the paper"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.13" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.13" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.14" operation="create()"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.14" operation="supervisor taking the paper"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.14" operation="call Task3 of BP component"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.14" operation="call Task3 of BP component"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.37" operation="form completeness checking"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.14" operation="return (correctOutputs)"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.15" operation="look at the paper"/>
+  <Message from="/0/@lifelines.13" to="/0/@lifelines.14" operation="create()"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.14" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.14" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.15" operation="create()"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.15" operation="look at the paper"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.16" operation="call Gateway1 of BP component"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.15" operation="create()"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.15" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.15" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.16" operation="create()"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.16" operation="call Gateway1 of BP component"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.37" operation="is the form complete?"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="save result in player log"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="save result in player log"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="run Thesis definition accuracy challenge"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="run Thesis definition accuracy challenge"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.38" operation="startChallenge"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.8" operation="color the form to red"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.17" operation="color the form to green"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.41" operation="recall Task2 of BP component"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.45" operation="runScoringRule"/>
+  <Message from="/0/@lifelines.15" to="/0/@lifelines.16" operation="create()"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.16" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.17" operation="create()"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.8" operation="create()"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.17" operation="color the form to green"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.17" operation="call Task5 of BP component"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.17" operation="call Task5 of BP component"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.37" operation="form confirmation and signing"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.18" operation="Supervisor write something on the form"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.17" operation="create()"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.17" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.17" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.18" operation="create()"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.18" operation="Supervisor write something on the form"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="put the form on the table"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="put the form on the table"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="call End Event of BP component"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="call End Event of BP component"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.37" operation="endEvent"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.18" operation="create()"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.18" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="save level finishing time in player log"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="save level finishing time in player log"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="show end of level screen"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="show end of level screen"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.39" operation="show"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="update game result for player"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="update game result for player"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="show level result screen"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.19" operation="show level result screen"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.40" operation="show"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.20" operation="open the door_s(constraint)"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.20" operation="open the door_s(constraint)"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.20" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.20" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.21" operation="create()"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.20" operation="create()"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.21" operation="close the door_s(constraint)"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.21" operation="close the door_s(constraint)"/>
+  <Message from="/0/@lifelines.20" to="/0/@lifelines.21" operation="create()"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.21" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.21" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.21" to="/0/@lifelines.20" operation="create()"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.22" operation="open the door(constraint,Animation)"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.22" operation="open the door(constraint,Animation)"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.22" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.22" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.23" operation="create()"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.22" operation="create()"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.23" operation="close the door(constraint,Animation)"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.23" operation="close the door(constraint,Animation)"/>
+  <Message from="/0/@lifelines.22" to="/0/@lifelines.23" operation="create()"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.23" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.23" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.23" to="/0/@lifelines.22" operation="create()"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.24" operation="choose download option"/>
+  <Message from="/0/@lifelines.0" to="/0/@lifelines.24" operation="choose print option"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.4" operation="play printer voice and show paper(constraint)"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.24" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.24" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.24" to="/0/@lifelines.4" operation="create()"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.24" operation="create()"/>
+  <Message from="/0/@lifelines.25" to="/0/@lifelines.25" operation="stop printer voice"/>
+  <Message from="/0/@lifelines.25" to="/0/@lifelines.25" operation="stop printer voice"/>
+  <Message from="/0/@lifelines.4" to="/0/@lifelines.25" operation="create()"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.26" operation="save the form in player log(constraint)"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.26" operation="Player write something on the form"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.26" operation="Player write something on the form"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.41" operation="Player edit something on the form"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.26" operation="create()"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.26" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.26" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.7" operation="create()"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.27" operation="show"/>
+  <Message from="/0/@lifelines.1" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.28" operation="!not Defined: save challenge score"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.28" operation="!not Defined: save challenge score"/>
+  <Message from="/0/@lifelines.2" to="/0/@lifelines.29" operation="preparing department thesis definition form"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.30" operation="!not defined: create/ update/ delete?"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.2" operation="return (correctOutputs)"/>
+  <Message from="/0/@lifelines.7" to="/0/@lifelines.29" operation="deliver the form to the supervisor"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.29" operation="preparing department thesis definition form"/>
+  <Message from="/0/@lifelines.8" to="/0/@lifelines.29" operation="change definition form"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.30" operation="read"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.29" operation="deliver the form to the supervisor"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.30" operation="!not defined: create/ update/ delete?"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.30" operation="read"/>
+  <Message from="/0/@lifelines.29" to="/0/@lifelines.30" operation="read"/>
+  <Message from="/0/@lifelines.3" to="/0/@lifelines.31" operation="startChallenge"/>
+  <Message from="/0/@lifelines.6" to="/0/@lifelines.32" operation="show"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.33" operation="show"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.34" operation="show"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.35" operation="ask task1 of BP component for correct answer"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.29" operation="preparing department thesis definition form"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.35" operation="runScoringRule"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.35" operation="runScoringRule"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.42" operation="calculateScore"/>
+  <Message from="/0/@lifelines.11" to="/0/@lifelines.35" operation="create()"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.35" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.35" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.12" operation="create()"/>
+  <Message from="/0/@lifelines.12" to="/0/@lifelines.36" operation="show"/>
+  <Message from="/0/@lifelines.14" to="/0/@lifelines.37" operation="form completeness checking"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.30" operation="read"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.14" operation="return (correctOutputs)"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.37" operation="is the form complete?"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.37" operation="setCorrectOutputs"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.37" operation="setCorrectOutputs"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.37" operation="setCorrectOutputs"/>
+  <Message from="/0/@lifelines.37" to="/0/@lifelines.37" operation="setCorrectOutputs"/>
+  <Message from="/0/@lifelines.17" to="/0/@lifelines.37" operation="form confirmation and signing"/>
+  <Message from="/0/@lifelines.18" to="/0/@lifelines.37" operation="endEvent"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.38" operation="startChallenge"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.39" operation="show"/>
+  <Message from="/0/@lifelines.19" to="/0/@lifelines.40" operation="show"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.41" operation="save updated form in player log(constraint)"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.28" operation="!not Defined"/>
+  <Message from="/0/@lifelines.26" to="/0/@lifelines.41" operation="Player edit something on the form"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.41" operation="recall Task2 of BP component"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.29" operation="deliver the form to the supervisor"/>
+  <Message from="/0/@lifelines.10" to="/0/@lifelines.41" operation="create()"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.41" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.41" to="/0/@lifelines.41" operation="changeState(condition)"/>
+  <Message from="/0/@lifelines.35" to="/0/@lifelines.42" operation="calculateScore"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.43" operation="create()"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.44" operation="create()"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.28" operation="!not Defined: save challenge score"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.43" operation="create()"/>
+  <Message from="/0/@lifelines.42" to="/0/@lifelines.44" operation="create()"/>
+  <Message from="/0/@lifelines.16" to="/0/@lifelines.45" operation="runScoringRule"/>
+  <Message from="/0/@lifelines.45" to="/0/@lifelines.46" operation="calculateScore"/>
+  <Message from="/0/@lifelines.45" to="/0/@lifelines.46" operation="calculateScore"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.47" operation="create()"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.48" operation="create()"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.28" operation="!not Defined: save challenge score"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.47" operation="create()"/>
+  <Message from="/0/@lifelines.46" to="/0/@lifelines.48" operation="create()"/>
+</xmi:XMI>
