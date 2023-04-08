@@ -1,8 +1,524 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ClassDiagram:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ClassDiagram="www.classdiagram.com" name="GameLogic">
-  <contents xsi:type="ClassDiagram:Class" name="student walking">
-    <operations name="walk to the computer" returnType="String">
-      <parameters name="a" type="String"/>
-    </operations>
-  </contents>
-</ClassDiagram:Package>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ClassDiagram="www.classdiagram.com">
+  <ClassDiagram:Package name="GameLogic">
+    <contents xsi:type="ClassDiagram:Class" name="level 1_Master Thesis Definition">
+      <attributes name="levelNumber"/>
+      <attributes name="isFinalLevel"/>
+      <attributes name="neededScore"/>
+      <operations name="initializeLevel"/>
+      <operations name="LoadLevel">
+        <parameters name="LevelName"/>
+      </operations>
+      <operations name="RestartLevel"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.0" isAggregation="true"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="StudentLog">
+      <attributes name="currentGameLevel"/>
+      <attributes name="score"/>
+      <attributes name="badges"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/2/@contents.0"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Student State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Start Level" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="show level startup screen "/>
+      <operations name="set level start time in player log"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.4"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.18"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="student walking" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="walk to the computer"/>
+      <operations name="call Task1 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.5"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form preparation" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="stand behind the computer"/>
+      <operations name="run URL challenge "/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.14"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.39"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="URL challenge finished" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="choose download option"/>
+      <operations name="choose print option"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.34"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form is printed" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="take the paper from printer"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.8"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Form sections query" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="show form sections query screen"/>
+      <operations name="fill each section and save"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.37"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.19"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="meeting supervisor" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="walk to the supervisor room"/>
+      <operations name="enter to the room"/>
+      <operations name="stand in front of supervisor character"/>
+      <operations name="call Task2 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form delivery" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="give the form to the supervisor character"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.20"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="change definition form" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="student look at the paper"/>
+      <operations name="leave supervisor room"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.12"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Form wrong sections query" superClass="/0/@contents.2">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="show highlighted form screen"/>
+      <operations name="player edits each wrong sections"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.38"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.22"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="URL challenge State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="URL query" superClass="/0/@contents.13">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="show URL Query screen"/>
+      <operations name="select a URL from list"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.15"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.20"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.13"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="check URL challenge response" superClass="/0/@contents.13">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="ask task1 of BP component for correct answer"/>
+      <operations name="validate user answer due to correct answer"/>
+      <operations name="runScoringRule"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.16"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.13"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="show URL challenge result" superClass="/0/@contents.13">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="show URL challenge result screen "/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.6"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.21"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.13"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Thesis definition accuracy State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="challenge response checking" superClass="/0/@contents.17">
+      <operations name="runScoringRule"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.17"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Supervisor State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form taking" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="supervisor taking the paper"/>
+      <operations name="call Task3 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.21"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form completeness checking" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="look at the paper"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.22"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form correctness checking" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="call Gateway1 of BP component"/>
+      <operations name="save result in player log"/>
+      <operations name="run Thesis definition accuracy challenge"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.24"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.23"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.40"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.18"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.38"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form rejection" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="color the form to red"/>
+      <operations name="highlights wrong fields of the saved form"/>
+      <operations name="return form paper to the student"/>
+      <operations name="call Task4 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.11"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form acceptance" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="color the form to green"/>
+      <operations name="call Task5 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.25"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form confirmation and signing" superClass="/0/@contents.19">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="Supervisor write something on the form"/>
+      <operations name="put the form on the table"/>
+      <operations name="call End Event of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Final State" superClass="/0/@contents.19">
+      <operations name="save level finishing time in player log"/>
+      <operations name="show end of level screen"/>
+      <operations name="update game result for player"/>
+      <operations name="show level result screen"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.23"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.24"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="door_s State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="open_s" superClass="/0/@contents.27">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="open the door_s">
+        <parameters name="constraint"/>
+      </operations>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.29"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.27"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="close_s" superClass="/0/@contents.27">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="close the door_s">
+        <parameters name="constraint"/>
+      </operations>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.28"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.27"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="door State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="open" superClass="/0/@contents.30">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="open the door">
+        <parameters name="Animation"/>
+        <parameters name="constraint"/>
+      </operations>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.32"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.30"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="close" superClass="/0/@contents.30">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="close the door">
+        <parameters name="Animation"/>
+        <parameters name="constraint"/>
+      </operations>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.31"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.30"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="printer State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="printer is on" superClass="/0/@contents.33">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="play printer voice and show paper">
+        <parameters name="constraint"/>
+      </operations>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.35"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.7"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.33"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="printer is off" superClass="/0/@contents.33">
+      <operations name="stop printer voice"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.33"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form Paper State">
+      <attributes name="isStartState"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form creation" superClass="/0/@contents.36">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="save the form in player log">
+        <parameters name="constraint"/>
+      </operations>
+      <operations name="Player write something on the form"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.9"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.38"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.36"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form updating" superClass="/0/@contents.36">
+      <operations name="changeState">
+        <parameters name="condition"/>
+      </operations>
+      <operations name="save updated form in player log">
+        <parameters name="constraint"/>
+      </operations>
+      <operations name="Player edit something on the form"/>
+      <operations name="recall Task2 of BP component"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.9"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Inheritance" target="/0/@contents.36"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="URL challenge">
+      <operations name="startChallenge"/>
+      <operations name="forceStopChallenge"/>
+      <operations name="validStopChallenge"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/0/@contents.41" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.13"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Thesis definition accuracy">
+      <operations name="startChallenge"/>
+      <operations name="forceStopChallenge"/>
+      <operations name="validStopChallenge"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/0/@contents.42" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.17"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="URL challenge reward">
+      <attributes name="calculatedScore"/>
+      <attributes name="context"/>
+      <operations name="calculateScore"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.36"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Thesis definition accuracy challenge reward">
+      <attributes name="calculatedScore"/>
+      <attributes name="context"/>
+      <operations name="calculateScore"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/0/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.37"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.36"/>
+    </contents>
+  </ClassDiagram:Package>
+  <ClassDiagram:Package name="UI">
+    <contents xsi:type="ClassDiagram:Class" name="Scene_Master Thesis Definition">
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.4" isAggregation="true"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Interface" name="GameObject"/>
+    <contents xsi:type="ClassDiagram:Class" name="Student" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.27"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.30"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.2"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Supervisor" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.28"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.19"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="University" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.5" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.10" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Supervisor Room" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.6" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.7" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.8" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.9" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="wall_s" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.29"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="door_s" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.28"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.32"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.27"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="table_s" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="computer_s" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Student Room" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.11" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.12" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.13" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.14" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/1/@contents.15" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="wall" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.29"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="door" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.28"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.32"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.30"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="table" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="computer" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="printer" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.33"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.33"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="form Paper" implements="/1/@contents.1">
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.26"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.29"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/1/@contents.34"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/0/@contents.36"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Screen" implements="/1/@contents.1">
+      <operations name="show"/>
+      <operations name="hide"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="level startup" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="form sections query" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="URL query" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="URL challenge result" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="highlighted form" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="End of level" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Class" name="level result" superClass="/1/@contents.17"/>
+    <contents xsi:type="ClassDiagram:Interface" name="Component"/>
+    <contents xsi:type="ClassDiagram:Class" name="Transform" implements="/1/@contents.25">
+      <attributes name="position"/>
+      <attributes name="rotation"/>
+      <attributes name="scale"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="CharacterController" implements="/1/@contents.25"/>
+    <contents xsi:type="ClassDiagram:Class" name="Trigger" implements="/1/@contents.25"/>
+    <contents xsi:type="ClassDiagram:Class" name="Collider" implements="/1/@contents.25"/>
+    <contents xsi:type="ClassDiagram:Class" name="RigidBody" implements="/1/@contents.25"/>
+    <contents xsi:type="ClassDiagram:Class" name="Art" implements="/1/@contents.25"/>
+    <contents xsi:type="ClassDiagram:Class" name="Animation" superClass="/1/@contents.31"/>
+    <contents xsi:type="ClassDiagram:Class" name="Audio" superClass="/1/@contents.31"/>
+    <contents xsi:type="ClassDiagram:Class" name="Material" superClass="/1/@contents.31"/>
+    <contents xsi:type="ClassDiagram:Interface" name="Reward"/>
+    <contents xsi:type="ClassDiagram:Class" name="Point" implements="/1/@contents.35">
+      <attributes name="value"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Badge" implements="/1/@contents.35">
+      <attributes name="title"/>
+    </contents>
+  </ClassDiagram:Package>
+  <ClassDiagram:Package name="DB">
+    <contents xsi:type="ClassDiagram:Class" name="Game_DB_worker">
+      <attributes name="instance" type="/2/@contents.0"/>
+      <operations name="getInstance" returnType="/2/@contents.0"/>
+      <operations name="create"/>
+      <operations name="read"/>
+      <operations name="update"/>
+      <operations name="delete"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="BP_DB_worker">
+      <attributes name="instance" type="/2/@contents.1"/>
+      <operations name="getInstance" returnType="/2/@contents.1"/>
+      <operations name="create"/>
+      <operations name="read"/>
+      <operations name="update"/>
+      <operations name="delete"/>
+    </contents>
+  </ClassDiagram:Package>
+  <ClassDiagram:Package name="Master Thesis Definition_process">
+    <contents xsi:type="ClassDiagram:Class" name="Student_lane">
+      <operations name="preparing department thesis definition form"/>
+      <operations name="deliver the form to the supervisor"/>
+      <operations name="change definition form"/>
+      <operations name="startEvent"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.1"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.3"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="Supervisor_lane">
+      <operations name="form completeness checking"/>
+      <operations name="form confirmation and signing"/>
+      <operations name="endEvent"/>
+      <operations name="is the form complete?"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.0"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/3/@contents.3"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="University">
+      <outputRelations xsi:type="ClassDiagram:Association" target="/3/@contents.0" isAggregation="true"/>
+      <outputRelations xsi:type="ClassDiagram:Association" target="/3/@contents.1" isAggregation="true"/>
+    </contents>
+    <contents xsi:type="ClassDiagram:Class" name="department thesis definition form">
+      <operations name="create"/>
+      <operations name="read"/>
+      <operations name="update"/>
+      <operations name="delete"/>
+      <outputRelations xsi:type="ClassDiagram:Dependency" target="/2/@contents.1"/>
+    </contents>
+  </ClassDiagram:Package>
+</xmi:XMI>
